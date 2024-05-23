@@ -22,8 +22,12 @@
         <span class="navbar-title">NannyPaw</span>
       </div>
       <div class="navbar-right">
-        <a href="<%= new_booking_path %>" class="navbar-link">Book Nanny</a>
-        <a href="<%= bookings_path %>" class="navbar-link">Admin</a>
+        <% unless current_page?(new_booking_path) %>
+          <a href="<%= new_booking_path %>" class="navbar-link">Book Nanny</a>
+        <% end %>
+        <% unless current_page?(bookings_path) %>
+          <a href="<%= bookings_path %>" class="navbar-link">Admin</a>
+        <% end %>
       </div>
     </div>
   </nav>
