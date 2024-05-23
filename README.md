@@ -1,24 +1,32 @@
-# README
+# NannyPaw
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+(Check it out!)[nannypaw.com]
 
-Things you may want to cover:
+* Ruby 3.3.1 + Rails 7.1
 
-* Ruby version
+* Reactified
 
-* System dependencies
+* Postgres
 
-* Configuration
+### Product Summary
 
-* Database creation
+The Company is rolling out a new service, Cat and Dog Sitting.
 
-* Database initialization
+### Product Requirements
 
-* How to run the test suite
+A form to collect bookings that takes:
+- First Name
+- Last Name
+- Animal Name
+- Animal Type (Dog/Cat)
+- Hours Requested (min 2, max 8)
+- Date of service
 
-* Services (job queues, cache servers, search engines, etc.)
+A "pricing engine" to determine the cost of service
+- Base charge of $20
+- $10 additional per hour for dogs
+- $5 additional per hour for cats
 
-* Deployment instructions
-
-* ...
+Display of all bookings on a separate page ("admin" pages)
+Unit tests for the pricing engine
+E2E (feature) tests for the booking form and admin pages

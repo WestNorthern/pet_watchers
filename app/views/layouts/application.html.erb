@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Nannypaw</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +12,11 @@
   </head>
 
   <body>
+  
   <nav class="navbar">
     <div class="navbar-container">
       <a href="<%= root_path %>" class="navbar-logo">
-        <img src="/path/to/logo.png" alt="NannyPaw Logo" class="logo">
+        <img src="<%= asset_path 'logo.png' %>" alt="NannyPaw Logo" class="logo">
       </a>
       <div class="navbar-center">
         <span class="navbar-title">NannyPaw</span>
