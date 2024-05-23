@@ -32,7 +32,7 @@ const PriceDisplay = ({ formData }) => {
       <p><strong>Base Cost ................................................ $20</strong></p>
       <p><strong>${animalCost}</strong></p>
       <p><strong>___________________________________</strong></p>
-      <p><strong>Total Cost ................................................ $${totalCost}</strong></p>
+      <p><strong>Total Cost ............................................... $${totalCost}</strong></p>
       <p>Does everything look good, ${formData.firstName}?</p>
     </div>
   `;

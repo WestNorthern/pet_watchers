@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'components/index'
-  root 'components#index'
+  resources :bookings
+  root 'bookings#new'
   get "up" => "rails/health#show", as: :rails_health_check
 end

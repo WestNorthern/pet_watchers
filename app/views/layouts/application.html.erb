@@ -11,6 +11,20 @@
   </head>
 
   <body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="<%= root_path %>" class="navbar-logo">
+        <img src="/path/to/logo.png" alt="NannyPaw Logo" class="logo">
+      </a>
+      <div class="navbar-center">
+        <span class="navbar-title">NannyPaw</span>
+      </div>
+      <div class="navbar-right">
+        <a href="<%= new_booking_path %>" class="navbar-link">Book Nanny</a>
+        <a href="<%= bookings_path %>" class="navbar-link">Admin</a>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
