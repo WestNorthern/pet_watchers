@@ -1,6 +1,6 @@
 # NannyPaw
 
-[Check it out!](nannypaw.com)
+[Check it out!](http://www.nannypaw.com)
 
 ### Heroku
 https://damp-river-21053-0b318be2f5f2.herokuapp.com/
