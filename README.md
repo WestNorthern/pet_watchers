@@ -1,8 +1,7 @@
 # NannyPaw
 
-[Check it out!](http://www.nannypaw.com)
-
-### Heroku
+### Hosted on Heroku
+Go ahead and check it out!
 https://damp-river-21053-0b318be2f5f2.herokuapp.com/
 
 * Ruby 3.3.1 + Rails 7.1
@@ -11,15 +10,27 @@ https://damp-river-21053-0b318be2f5f2.herokuapp.com/
 
 * Postgres
 
-### Product Summary
+### Setup
+`$ git clone git@github.com:WestNorthern/nannypaw.git`
+`$ cd nannypaw`
+`$ bundle install`
 
-The Company is rolling out a new service, Cat and Dog Sitting.
+Make sure you have postgres running in the background, then
+
+`$ rails db:migrate`
+`$ rails s`
+
+Visit localhost:3000 and check it out!
 
 ### Running Tests
 #### Unit Tests
 `$ rails test`
 #### E2E Tests
 `$ rails test:system`
+
+### Product Summary
+
+The Company is rolling out a new service, Cat and Dog Sitting.
 
 ### Product Requirements
 
