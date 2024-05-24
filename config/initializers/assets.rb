@@ -10,5 +10,5 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( *.js )
 Rails.application.config.assets.precompile += Dir[Rails.root.join('app', 'javascript', '**', '*.js')].map { |path| Pathname.new(path).relative_path_from(Rails.root.join('app', 'assets')).to_s }
-Rails.application.config.assets.precompile += %w( components/htm_create_element.js hero.png )
