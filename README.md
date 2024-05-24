@@ -2,6 +2,9 @@
 
 [Check it out!](nannypaw.com)
 
+### Heroku
+https://damp-river-21053-0b318be2f5f2.herokuapp.com/
+
 * Ruby 3.3.1 + Rails 7.1
 
 * Reactified
