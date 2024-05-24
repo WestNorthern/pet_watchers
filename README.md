@@ -53,6 +53,14 @@ A "pricing engine" to determine the cost of service
 
 Display of all bookings on a separate page ("admin" pages)
 
+### Notes
+
+Check out this cool logo my daughter made. She also thought NannyPaw would be an excellent app name.
+
+![cool logo]([http://url/to/img.png](https://media.discordapp.net/attachments/1128874173486338150/1243320765282259107/image.png?ex=6651b4f2&is=66506372&hm=2ac178be5f2b823083651c712bba8d4b1ed6a51dd9dc58dfe6d9e211ecc4f63e&=&format=webp&quality=lossless&width=564&height=548))
+
 Unit tests for the pricing engine
 
 E2E (feature) tests for the booking form and admin pages
+
+
