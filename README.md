@@ -1,6 +1,6 @@
 # NannyPaw
 
-(Check it out!)[nannypaw.com]
+[Check it out!](nannypaw.com)
 
 * Ruby 3.3.1 + Rails 7.1
 
