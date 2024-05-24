@@ -12,6 +12,12 @@
 
 The Company is rolling out a new service, Cat and Dog Sitting.
 
+### Running Tests
+#### Unit Tests
+`$ rails test`
+#### E2E Tests
+`$ rails test:system`
+
 ### Product Requirements
 
 A form to collect bookings that takes:
@@ -28,5 +34,7 @@ A "pricing engine" to determine the cost of service
 - $5 additional per hour for cats
 
 Display of all bookings on a separate page ("admin" pages)
+
 Unit tests for the pricing engine
+
 E2E (feature) tests for the booking form and admin pages
