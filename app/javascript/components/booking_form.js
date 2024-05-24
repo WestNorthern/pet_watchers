@@ -14,6 +14,7 @@ class BookingForm extends Component {
       dateOfService: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -26,6 +27,41 @@ class BookingForm extends Component {
   allFieldsFilled() {
     const { firstName, lastName, animalName, hoursRequested, dateOfService } = this.state;
     return firstName && lastName && animalName && hoursRequested && dateOfService;
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    if (this.allFieldsFilled()) {
+      const { firstName, lastName, animalName, animalType, hoursRequested, dateOfService } = this.state;
+
+      fetch('/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': document.querySelector('[name=csrf-token]').content
+        },
+        body: JSON.stringify({
+          booking: {
+            first_name: firstName,
+            last_name: lastName,
+            animal_name: animalName,
+            animal_type: animalType,
+            hours_requested: hoursRequested,
+            date_of_service: dateOfService
+          }
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.id) {
+          window.location.href = `/bookings/${data.id}`;
+        } else {
+          alert('There was an error creating the booking.');
+        }
+      });
+    } else {
+      alert('Please fill out all fields.');
+    }
   }
 
   render() {
@@ -67,7 +103,7 @@ class BookingForm extends Component {
 
     return h`
       <div style=${styles.formComponent}>
-        <form>
+        <form onSubmit=${this.handleSubmit}>
           <div style=${styles.formGroup}>
             <label style=${styles.label}>First Name:</label>
             <input
@@ -139,11 +175,11 @@ class BookingForm extends Component {
             />
           </div>
           ${this.allFieldsFilled() ? h`<${PriceDisplay} formData=${this.state} />` : null}
-          ${this.allFieldsFilled() ? h`<button type="submit" style=${styles.button} onMouseOver=${(e) => e.currentTarget.style.backgroundColor = styles.buttonHover.backgroundColor} onMouseOut=${(e) => e.currentTarget.style.backgroundColor = styles.button.backgroundColor}>Book It!</button>` : null}        </form>
+          ${this.allFieldsFilled() ? h`<button type="submit" style=${styles.button} onMouseOver=${(e) => e.currentTarget.style.backgroundColor = styles.buttonHover.backgroundColor} onMouseOut=${(e) => e.currentTarget.style.backgroundColor = styles.button.backgroundColor}>Book It!</button>` : null}
+        </form>
       </div>
     `;
   }
 }
 
 export default BookingForm;
-

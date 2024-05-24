@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Nannypaw</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +13,30 @@
   </head>
 
   <body>
+  
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="<%= root_path %>" class="navbar-logo">
+          <img src="<%= asset_path 'logo.png' %>" alt="NannyPaw Logo" class="logo">
+        </a>
+        <div class="navbar-right">
+          <% unless current_page?(new_booking_path) %>
+            <a href="<%= new_booking_path %>" class="navbar-link">Book a Sitter</a>
+          <% end %>
+          <% unless current_page?(bookings_path) %>
+            <a href="<%= bookings_path %>" class="navbar-link">Admin</a>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <%= Date.current.year %> PetWatchers. All rights reserved.</p>
+      </div>
+    </footer>
+
   </body>
 </html>
