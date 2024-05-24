@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
   
     # GET /bookings/new
     def new
-      @booking = Booking.new
     end
   
     # GET /bookings/1/edit
@@ -59,13 +58,6 @@ class BookingsController < ApplicationController
       # Nice try, hackers.
       def booking_params
         params.require(:booking).permit(:first_name, :last_name, :animal_name, :animal_type, :hours_requested, :date_of_service)
-      end
-  
-      # Enterprise Quality Back End Pricing Engine
-      def calculate_total_cost(animal_type, hours_requested)
-        base_rate = 20.0
-        animal_rate = animal_type == 'Dog' ? 10 : 5
-        base_rate + (animal_rate * hours_requested)
       end
   end
   
