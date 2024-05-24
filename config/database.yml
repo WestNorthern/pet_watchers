@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: nannypaw_production
-  username: nannypaw
-  password: <%= ENV["NANNYPAW_DATABASE_PASSWORD"] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
