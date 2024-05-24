@@ -1,23 +1,27 @@
 # NannyPaw
 
-### Hosted on Heroku
-Go ahead and check it out!
-https://damp-river-21053-0b318be2f5f2.herokuapp.com/
-
 * Ruby 3.3.1 + Rails 7.1
 
 * Reactified
 
 * Postgres
 
+### View the App on Heroku
+
+https://damp-river-21053-0b318be2f5f2.herokuapp.com/
+
 ### Setup
+
 `$ git clone git@github.com:WestNorthern/nannypaw.git`
+
 `$ cd nannypaw`
+
 `$ bundle install`
 
 Make sure you have postgres running in the background, then
 
 `$ rails db:migrate`
+
 `$ rails s`
 
 Visit localhost:3000 and check it out!
