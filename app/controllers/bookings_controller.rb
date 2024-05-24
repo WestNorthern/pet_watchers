@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+    include BookingsHelper
     before_action :set_booking, only: [:show, :edit, :update, :destroy]
   
     # GET /bookings
@@ -25,14 +26,14 @@ class BookingsController < ApplicationController
   
     # POST /bookings
     def create
-      @booking = Booking.new(booking_params)
-      @booking.total_cost = calculate_total_cost(@booking.animal_type, @booking.hours_requested)
-  
-      if @booking.save
-        render json: @booking, status: :created
-      else
-        render json: @booking.errors, status: :unprocessable_entity
-      end
+        @booking = Booking.new(booking_params)
+        @booking.total_cost = calculate_total_cost(@booking.animal_type, @booking.hours_requested)
+    
+        if @booking.save
+          render json: @booking, status: :created
+        else
+          render json: @booking.errors, status: :unprocessable_entity
+        end
     end
   
     # PATCH/PUT /bookings/1
