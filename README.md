@@ -62,5 +62,5 @@ E2E (feature) tests for the booking form and admin pages
 
 Check out this cool logo my daughter made. She also thought NannyPaw would be an excellent app name.
 
-![cool logo](https://media.discordapp.net/attachments/1128874173486338150/1243320765282259107/image.png?ex=6651b4f2&is=66506372&hm=2ac178be5f2b823083651c712bba8d4b1ed6a51dd9dc58dfe6d9e211ecc4f63e&=&format=webp&quality=lossless&width=564&height=548)
+![cool logo](https://media.discordapp.net/attachments/1128874173486338150/1243320765282259107/image.png?ex=6687c272&is=668670f2&hm=43fe33cd278c8739b52736fec0ff747be476000ed57c39996c992267cb824b76&=&format=webp&quality=lossless&width=564&height=548)
 
