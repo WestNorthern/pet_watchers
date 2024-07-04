@@ -13,7 +13,7 @@ https://damp-river-21053-0b318be2f5f2.herokuapp.com/
 
 ### Setup
 
-`$ git clone git@github.com:WestNorthern/nannypaw.git`
+`$ git clone git@github.com:WestNorthern/pet_watchers.git`
 
 `$ cd nannypaw`
 
