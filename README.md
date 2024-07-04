@@ -8,7 +8,7 @@
 
 ### View the App on Heroku
 
-This app has been shelved. Didn't get the job ¯\_(ツ)_/¯
+This app has been shelved. Didn't get the job ¯\\_(ツ)_/¯
 https://damp-river-21053-0b318be2f5f2.herokuapp.com/
 
 ### Setup
